@@ -1,0 +1,258 @@
+/* Assignment 3 CSS File - Jacob Domingo */
+
+/* Style class for the web page */
+:root {
+    --link-color-nav: yellow;
+    --link-color-header: yellow;
+    --link-color: blue;
+    --background-color: white;
+    --font-color: black;
+    --border-element: 2px solid black;
+    --header-color: white;
+    --header-background: steelblue;
+    --nav-background: black;
+    --nav-color: white;
+    --footer-background: black;
+    --footer-color: white;
+}
+
+/* Changing the font-family of the web page */
+html {
+    font-family: sans-serif;
+}
+
+/* Changing the color and background color of body in the web page */
+body{
+    background-color: var(--background-color);
+    color: var(--font-color);
+    /* I uses the transition property I learned from Julio Codes from his tutorial in youtube (https://www.youtube.com/watch?v=Ia1yEBjrSsQ&ab_channel=JulioCodes), Accesed: March 10, 2021 */
+    transition: background-color 1s, color 1s; 
+}
+
+/* Styling page header to have a coloured background and a coloured text */
+#pg-header {
+    color: var(--header-color);
+    background-color: var(--header-background);
+    text-align: center;
+}
+
+/* Styling navigation links to have coloured text */
+header a:link {
+    color: var(--link-color-header);
+    text-decoration: none;
+}
+
+/* Styling page nav to have a coloured background */
+nav {
+    background-color: var(--nav-background);
+    color: var(--nav-color);
+}
+
+/* Styling page nav direct child h2 to position it in a line with the nav links */
+nav > h2 {
+    display: inline-block;
+}
+
+/* Styling page nav grand child ul to position it in a line */
+nav ul {
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px;
+}
+
+/* Styling page nav grand child li to position it in a line */
+nav li { 
+    display: inline-block;
+    padding: 10px;
+}
+
+/* Styling page nav links to have a text colour */
+nav a:link {
+    color: var(--link-color-nav);
+    text-decoration: none;
+}
+
+/* Styling page nav links to have a text colour when visited */
+nav a:visited {
+    color: var(--link-color-nav);
+}
+
+/* Styling page nav links to have a text colour when you hover the colour */
+nav a:hover {
+    color: var(--link-color-nav);
+}
+
+/* Styling page nav links to have a text colour when the link is active */
+nav a:active {
+    color: var(--link-color-nav);
+}
+
+/* Styling sections links to have coloured text */
+section a:link {
+    color: var(--link-color);
+    text-decoration: none;
+    text-decoration: underline;
+}
+
+/* Styling page sections links to have a text colour when visited */
+section a:visited {
+    color: var(--link-color);
+}
+
+/* Styling page main to have a 80vw width and position the element to appear in the middle of vw */
+#pg-main {
+    width: 80vw;
+    margin: 0 auto;
+}
+/* Styling page section:featured news direct child h2 to position in the middle of the vw */
+#featured-news > h2 {
+    text-align: center;
+}
+
+/* Styling page section:featured news direct child h3 to position in the middle of its section */
+#featured-news h3 {
+    text-align: center;
+}
+
+/* Styling page section:featured news direct child h4 to position in the middle of its section */
+#featured-news h4{
+    text-align: center;
+}
+
+/* Styling page section:featured news image to float in the right and change its width */
+#featured-img {
+    width: 350px;
+    float: right;
+    margin: 0 20px 0px 0px;
+}
+
+/* Styling page section:featured news article 1 to have half of its width and float to the left */
+#f-news1 {
+    width: 50%;
+    float: left;
+}
+/* Styling page section:featured news article 2 to have half of its width and float to the right */
+#f-news2 {
+    width: 50%;
+    float: right;
+}
+
+/* Styling page section:hali zone to appear in its own line, no floats around */
+#hali-zone {
+    clear: both;
+}
+
+/* Styling page footer to have a coloured background and a coloured text */
+#pg-footer {
+    background-color: var(--footer-background);
+    color: var(--footer-color);
+}
+/* Styling page footer direct child p to appear in the middle with a 100px height */
+#pg-footer > p {
+    margin: 10px;
+    line-height: 100px;
+    vertical-align: middle;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1200px){ /* Desktop view to Tablet view */
+    .pg-main-content{
+        display: grid;
+    }
+    .pg-main-content > section{
+        border: var(--border-element);
+        margin: 5px;
+        padding: 10px;
+    }
+    .featured-article{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    #featured-img{
+        width: 450px;
+        overflow: auto;
+        margin: 0px 10px 10px 0px;
+    }
+    #f-news1{
+        width: auto;
+    }
+    #f-news2{
+        width: auto;
+    }
+    #hali-zone > h2{
+        text-align: center;
+    }
+    #nat-int > h2{
+        text-align: center;
+    }
+    #edu> h2{
+        text-align: center;
+    }
+    #health > h2{
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 840px){ /* Desktop view to Tablet view */
+    .pg-main-content{
+        display: grid;
+    }   
+    .pg-main-content > section{
+        border: var(--border-element);
+        margin: 5px;
+        padding: 10px;
+    }
+    #featured-img{
+        width: 350px;
+        overflow: auto;
+        margin: 0 20px 0px 0px;
+    }
+    .featured-article{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 45% 55%;
+    }
+    #f-news1{
+        width: auto;
+    }
+    #f-news2{
+        width: auto;
+    }
+    #hali-zone > h2{
+        text-align: center;
+    }
+    #nat-int > h2{
+        text-align: center;
+    }
+    #edu> h2{
+        text-align: center;
+    }
+    #health > h2{
+        text-align: center;
+    }
+
+}
+
+/* Dark mode styling */
+button{
+    position: absolute;
+    top: 75px;
+    right: 10px;
+    background-color: rgb(199, 199, 199);
+}
+
+/* Dark mode style class for the web page */
+.dark-mode {
+    --link-color-nav: red;
+    --link-color-header: yellow;
+    --link-color: #bb86fc;
+    --background-color: black;
+    --font-color: white;
+    --border-element: 2px solid white;
+    --header-color: white;
+    --header-background: #3282b8;
+    --nav-background: rgba(211, 211, 211, 0.932); 
+    --nav-color: black;
+    --footer-background: rgba(211, 211, 211, 0.932);
+    --footer-color: black;
+}
