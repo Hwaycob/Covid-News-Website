@@ -1,8 +1,11 @@
 # This project website is a personal made project as a school project.
 
 Author: Jacob Ismael C. Domingo
+
 B00#: B00859343
+
 Email: jc298378@dal.ca
+
 School: Dalhousie University
 
 # About the Website
